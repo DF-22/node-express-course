@@ -27,6 +27,14 @@ app.get('/users/:id', function (req, res) {
     })
 })
 
+app.get('/data', function (req, res) {
+    console.log(req.params.id)
+    res.json({
+        success: true,
+        data: mockUserData
+    })
+})
+
 app.post('/login',function(req,res){
     const username = req.body.username;
     const password = req.body.password;
